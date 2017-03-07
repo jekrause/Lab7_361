@@ -21,7 +21,7 @@ public class MainDirectory {
 
 	public static void getUpdate() {
 		// TODO Auto-generated method stub
-		
+		mainList.clear();
 	}
 
 	public static void getUpdate(List<Employee> newOne)
