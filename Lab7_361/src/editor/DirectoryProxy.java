@@ -23,13 +23,17 @@ public class DirectoryProxy {
  
  public void Clear()
  {
-	 this.Elist=new ArrayList<>();
+	 this.Elist.clear();
 	 MainDirectory.getUpdate();
  }
  
  public void Print()
  {
 	 //toJson(Elist)???
+	 if(Elist.isEmpty())
+	 {
+		 System.out.println("<empty directory>");
+	 }
 	 
  }
 	

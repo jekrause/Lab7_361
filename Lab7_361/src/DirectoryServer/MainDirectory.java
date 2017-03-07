@@ -1,14 +1,22 @@
 package DirectoryServer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import editor.Employee;
 
 public class MainDirectory {
-
+    static List<Employee> mainList= new ArrayList<>();
+	
+	MainDirectory()
+	{
+		
+	}
+    
+    
 	public static List<Employee> getList() {
 		// TODO Auto-generated method stub
-		return null;
+		return mainList;
 	}
 
 	public static void getUpdate() {
@@ -16,5 +24,9 @@ public class MainDirectory {
 		
 	}
 
+	public static void getUpdate(List<Employee> newOne)
+	{
+		mainList=newOne;
+	}
 
 }
