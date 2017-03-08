@@ -72,7 +72,7 @@ static DirectoryProxy DP=new DirectoryProxy();
 				Employee ed=new Employee(Data[1], Data[0], Data[3], Data[2]);
 						Emlist.add(ed);
 			}
-			DP.add(Emilst);
+			DP.add(Emlist);
 			//need add update here
 			break;
 			case("PRINT"):

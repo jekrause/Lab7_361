@@ -22,7 +22,7 @@ public class MainDirectory {
 	public static void add(String in){
 		List<Employee> ep  = (g.fromJson(in, new TypeToken<Collection<Employee>> (){}.getType()));
 		for(Employee pp:ep){
-			
+			mainList.add(pp);
 		}
 	}
     
@@ -41,14 +41,14 @@ public class MainDirectory {
 		mainList=newOne;
 	}
 	
-	public void print(){
+	public static void print(){
 		List<String> sorted = sort();
 		for(int i=0; i<sorted.size(); i++){
 			System.out.println(sorted.get(i));
 		}
 	}
 	@SuppressWarnings("unchecked")
-	public List<String> sort(){
+	public static List<String> sort(){
 		List<String>sorted= new ArrayList<>();
 		for(int i =0; i<mainList.size(); i++){
 			sorted.add(mainList.get(i).toString());

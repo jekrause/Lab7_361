@@ -30,7 +30,7 @@ public class DirectoryProxy {
  
  public void Clear()
  {
-	 MainDirectory.clear();
+	 MainDirectory.getUpdate();
  }
  
  public void Print()
