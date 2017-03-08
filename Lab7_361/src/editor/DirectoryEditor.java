@@ -19,6 +19,7 @@ static DirectoryProxy DP=new DirectoryProxy();
 	
 	public static void main (String[] args)
 	{
+		Gson g = new Gson();
 		Scanner std=new Scanner(System.in);
 		System.out.println("File(f) or Input(i)");
 		String Ys=std.nextLine();

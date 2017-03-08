@@ -2,18 +2,29 @@ package DirectoryServer;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Collection;
 import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import editor.Employee;
 
 public class MainDirectory {
     static List<Employee> mainList= new ArrayList<>();
-	
+	static Gson g = new Gson();
 	public MainDirectory()
 	{
 		
 	}
     
+	
+	public static void add(String in){
+		List<Employee> ep  = (g.fromJson(in, new TypeToken<Collection<Employee>> (){}.getType()));
+		for(Employee pp:ep){
+			
+		}
+	}
     
 	public static List<Employee> getList() {
 		// TODO Auto-generated method stub
