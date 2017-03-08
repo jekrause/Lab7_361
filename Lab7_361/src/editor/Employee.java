@@ -16,7 +16,7 @@ public class Employee {
 	
 	public String toString(){
 		String str="";
-		
+		str = str+lastName+", "+firstName+ " "+ Phone + " " + Department;
 		return str;
 	}
 	

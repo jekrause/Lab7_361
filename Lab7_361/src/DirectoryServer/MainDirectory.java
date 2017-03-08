@@ -1,6 +1,7 @@
 package DirectoryServer;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import editor.Employee;
@@ -8,7 +9,7 @@ import editor.Employee;
 public class MainDirectory {
     static List<Employee> mainList= new ArrayList<>();
 	
-	MainDirectory()
+	public MainDirectory()
 	{
 		
 	}
@@ -28,5 +29,27 @@ public class MainDirectory {
 	{
 		mainList=newOne;
 	}
+	
+	public void print(){
+		List<String> sorted = sort();
+		for(int i=0; i<sorted.size(); i++){
+			System.out.println(sorted.get(i));
+		}
+	}
+	@SuppressWarnings("unchecked")
+	public List<String> sort(){
+		List<String>sorted= new ArrayList<>();
+		for(int i =0; i<mainList.size(); i++){
+			sorted.add(mainList.get(i).toString());
+		}
+		sorted.sort((Comparator<? super String>) sorted);
+		return sorted;
+	}
+	public static Comparator<String> c = new Comparator<String>(){
+		public int compare(String p1,String p2){
+			return p1.compareTo(p2);
+			
+		}
+	};
 
 }
