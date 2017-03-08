@@ -8,6 +8,9 @@ public class DirectoryEditor {
 	{
 		Scanner std=new Scanner(System.in);
 		DirectoryProxy DP=new DirectoryProxy();
+		
+		
+		
 		System.out.println("Please enter commends");
 		while(true)
 		{
