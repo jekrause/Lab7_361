@@ -42,10 +42,17 @@ public class MainDirectory {
 	}
 	
 	public static void print(){
-		List<String> sorted = sort();
-		for(int i=0; i<sorted.size(); i++){
-			System.out.println(sorted.get(i));
+		if(mainList.isEmpty()){
+			System.out.println("<empty directory>");
 		}
+		else{
+			List<String> sorted = sort();
+			for(int i=0; i<sorted.size(); i++){
+				System.out.println(sorted.get(i));
+			}
+		}
+		System.out.println();
+		
 	}
 	@SuppressWarnings("unchecked")
 	public static List<String> sort(){
@@ -53,7 +60,7 @@ public class MainDirectory {
 		for(int i =0; i<mainList.size(); i++){
 			sorted.add(mainList.get(i).toString());
 		}
-		sorted.sort((Comparator<? super String>) sorted);
+		sorted.sort(c);
 		return sorted;
 	}
 	public static Comparator<String> c = new Comparator<String>(){
