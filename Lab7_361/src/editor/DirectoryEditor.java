@@ -40,12 +40,11 @@ static DirectoryProxy DP=new DirectoryProxy();
 		
 	}
 
-	public static void readFromFile(String file){//use RaceData/testBuff.txt
+	public static void readFromFile(String file){
 		try(Scanner buff = new Scanner(new FileInputStream(file))){	
 			String currentLine;
 			while((buff.hasNext())){
 				currentLine = buff.nextLine();
-				//currentLine = buff.next();
 				commandExec(currentLine,buff);
 			}
 		} catch (FileNotFoundException e) {
@@ -72,9 +71,7 @@ static DirectoryProxy DP=new DirectoryProxy();
 						Emlist.add(ed);
 						str=std.nextLine();
 			}
-			System.out.println("there");
 			DP.add(Emlist);
-			//need add update here
 			break;
 			case("PRINT"):
 			DP.Print();
