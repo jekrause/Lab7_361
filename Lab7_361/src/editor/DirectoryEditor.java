@@ -67,7 +67,6 @@ static DirectoryProxy DP=new DirectoryProxy();
 			//Keep update until see END
 			List<Employee> Emlist=new ArrayList<>();
 			while(!str.equals("END")){  
-				
 			    String [] Data = str.split(" ");
 				Employee ed=new Employee(Data[1], Data[0], Data[3], Data[2]);
 						Emlist.add(ed);
