@@ -32,7 +32,7 @@ static DirectoryProxy DP=new DirectoryProxy();
 			
 		}
 		else{
-			
+			System.out.println("Reading from console");
 			ReadFconsole(std);
 		}
 		
@@ -71,7 +71,9 @@ static DirectoryProxy DP=new DirectoryProxy();
 			    String [] Data = str.split(" ");
 				Employee ed=new Employee(Data[1], Data[0], Data[3], Data[2]);
 						Emlist.add(ed);
+						str=std.nextLine();
 			}
+			System.out.println("there");
 			DP.add(Emlist);
 			//need add update here
 			break;
